@@ -1,0 +1,74 @@
+.header-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-image: linear-gradient(120deg, #7670e1 0%, #32df5d 100%);
+    box-shadow: 0 0 5px 0 rgb(152, 151, 151);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .title {
+    margin-left: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+// .search-bar {
+//     // height: 55px;
+//     // width: 300px;
+//     flex: 1 1 auto;
+// }
+
+.search-container {
+    position: relative;
+    width: 30%;
+    // margin-right: 5%;
+}
+
+.search-bar {
+    width: 80%;
+    transition: width 0.3s ease-in-out;
+    // margin-right: 5%;
+}
+
+.search-bar input {
+    width: 80%;
+    // margin-right: 5%;
+
+}
+
+.search-bar:focus-within {
+    width: 100%;
+    // margin-right: 5%;
+
+}
+::ng-deep .mat-mdc-form-field-subscript-wrapper{
+    height: 0px !important;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.user-info mat-icon {
+    margin-right: 8px;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button mat-icon {
+    margin-right: 4px;
+}
