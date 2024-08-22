@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
   isAdmin: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.signupForm = this.fb.group({
       name: ['', [Validators.required]],
       dob: ['', [Validators.required]],
@@ -40,6 +40,7 @@ export class SignupComponent implements OnInit {
         this.http.post('http://localhost:3000/admin', formData).subscribe({
           next: response => {
             console.log('Signup successful', response);
+            this.router.navigate(['/dashboard']);
           },
           error: error => {
             console.error('Signup failed', error);
@@ -50,6 +51,8 @@ export class SignupComponent implements OnInit {
           .subscribe({
             next: response => {
               console.log('Signup successful', response);
+              this.router.navigate(['/dashboard']);
+
               //signup  successfull
             },
             error: error => {
