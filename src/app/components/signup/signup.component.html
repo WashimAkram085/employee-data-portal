@@ -1,0 +1,58 @@
+<!-- signup.component.html -->
+<div style="display: flex; justify-content: center;">
+    <div class="signup-container">
+        <button class="toggle-btn" mat-raised-button color="primary" (click)="toggleRole()">
+            Switch to {{ isAdmin ? 'User' : 'Admin' }}
+        </button>
+
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Name">
+            </mat-form-field>
+            <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)"
+                style="color: red;"></div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="Date of Birth">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div *ngIf="signupForm.get('dob')?.invalid && (signupForm.get('dob')?.dirty || signupForm.get('dob')?.touched)"
+                style="color: red;"></div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput formControlName="mobile" placeholder="Mobile Number">
+            </mat-form-field>
+            <div *ngIf="signupForm.get('mobile')?.invalid && (signupForm.get('mobile')?.dirty || signupForm.get('mobile')?.touched)"
+                style="color: red;"></div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Email">
+            </mat-form-field>
+            <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)"
+                style="color: red;"></div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Department</mat-label>
+                <input matInput formControlName="department" placeholder="Department">
+            </mat-form-field>
+            <div *ngIf="signupForm.get('department')?.invalid && (signupForm.get('department')?.dirty || signupForm.get('department')?.touched)"
+                style="color: red;"></div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" placeholder="Password of min length 6">
+            </mat-form-field>
+            <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)"
+                style="color: red;"></div>
+
+            <button class="signup-btn" mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">
+                Sign Up as {{ isAdmin ? 'Admin' : 'User' }}
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: center;">
+    <div class="login-container">
+        <button class="toggle-btn" mat-raised-button color="primary" class="toggle-button" (click)="toggleRole()">
+            Switch to {{ isAdmin ? 'User' : 'Admin' }}
+        </button>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Email">
+            </mat-form-field>
+            <!-- <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+                style="color: red;"></div> -->
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" placeholder="Password">
+            </mat-form-field>
+            <!-- <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+                style="color: red;">Please provide a valid password</div> -->
+
+            <button class="login-btn" mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                Login as {{ isAdmin ? 'Admin' : 'User' }}
+            </button>
+        </form>
+    </div>
+
+</div>
