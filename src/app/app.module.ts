@@ -18,7 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
-import { http } from 'winston';
+
 @NgModule({
   declarations: [
     AppComponent,
