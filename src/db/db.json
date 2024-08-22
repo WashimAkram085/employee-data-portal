@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "id": "fd38",
+      "name": "wertyu",
+      "dob": "2024-08-14T18:30:00.000Z",
+      "mobile": "9876543210",
+      "role": "user",
+      "department": "HR",
+      "email": "w@gmail",
+      "password": "123456"
+    },
+    {
+      "id": "0d1d",
+      "name": "Washim",
+      "dob": "2001-07-04T18:30:00.000Z",
+      "mobile": "9876543210",
+      "role": "user",
+      "department": "Admin",
+      "email": "washim@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "admin": [
+    {
+      "id": "c28f",
+      "name": "WashimA",
+      "dob": "2001-07-04T18:30:00.000Z",
+      "mobile": "9876543210",
+      "role": "admin",
+      "department": "admin",
+      "email": "washim@gmail.com",
+      "password": "123456"
+    }
+  ]
+}
