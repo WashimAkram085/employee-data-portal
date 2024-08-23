@@ -46,7 +46,8 @@
 
 ::ng-deep .toggle-btn {
     margin-top: 10px;
-    background-image: linear-gradient(120deg, #a1c2d7 0%, #000dff 100%) !important;
+    border: 1px solid white !important;
+    background-image: linear-gradient(120deg, #32df5d 0%, #7670e1 100%) !important;
 }
 
 ::ng-deep .signup-btn {

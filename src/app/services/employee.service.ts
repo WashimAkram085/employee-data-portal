@@ -18,4 +18,16 @@ export class EmployeeService {
   deleteEmployee(id : number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
+
+  // get login user details
+  private loggedInUser: any = null;
+
+  setLoggedInUser(user: any): void {
+    this.loggedInUser = user;
+  }
+
+  getLoggedInUser(): any {
+    return this.loggedInUser;
+  }
+
 }

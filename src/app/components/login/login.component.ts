@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   isAdmin: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private employeeService: EmployeeService) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -38,6 +39,7 @@ export class LoginComponent implements OnInit {
             const admin = response.find(admin => admin.email === formData.email && admin.password === formData.password);
             if (admin) {
               console.log("Admin Login Successfull");
+              this.employeeService.setLoggedInUser(admin);
               this.router.navigate(['/dashboard']);
             } else {
               console.log("Invalid Admin Credentials");
@@ -54,6 +56,7 @@ export class LoginComponent implements OnInit {
             const user = response.find(user => user.email === formData.email && user.password === formData.password);
             if (user) {
               console.log("User Login Successfull");
+              this.employeeService.setLoggedInUser(user);
               this.router.navigate(['/dashboard']);
             } else {
               console.log("Invalid User Credentials");

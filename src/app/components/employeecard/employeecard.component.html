@@ -1,6 +1,6 @@
 <div class="note-card">
-    <div class="card" *ngFor="let emp of employees">
-        <div class="admin">
+    <div class="card" *ngFor="let emp of filteredEmployees">
+        <div>
             <div class="header">Name : {{emp.name}}</div>
             <div class="body">
                 <div> Department : {{emp.department}}</div>
@@ -8,21 +8,10 @@
                 <div>Mobile No. : {{emp.mobile}}</div>
                 <div>Email : {{emp.email}}</div>
             </div>
-            <div class="button">
+            <div class="button" *ngIf="loggedInUser.role === 'admin'">
                 <mat-icon class="button-icon" (click)="deleteUser(emp.id)">delete_outline</mat-icon>
                 <mat-icon class="button-icon">edit</mat-icon>
             </div>
         </div>
     </div>
-    <!-- <div class="card" *ngFor="let emp of filteredEmployees">
-        <div class="user" *ngIf="emp.role==='user'">
-            <div class="header">Name : {{emp.name}}</div>
-            <div class="body">
-                <div> Department : {{emp.department}}</div>
-                <div>DOB : {{emp.dob | date}}</div>
-                <div>Mobile No. : {{emp.mobile}}</div>
-                <div>Email : {{emp.email}}</div>
-            </div>
-        </div>
-    </div> -->
 </div>
