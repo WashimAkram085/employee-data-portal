@@ -1,5 +1,7 @@
 import { Component , OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchService } from 'src/app/services/search/search.service';
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ export class HeaderComponent {
 
   userRole: string = 'User';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private searchservice : SearchService) {}
 
   ngOnInit(): void {
     // Logic to determine if the user is an admin or a regular user
@@ -23,5 +25,12 @@ export class HeaderComponent {
     // Logic to handle logout
     localStorage.removeItem('role');
     this.router.navigate(['/login']);
+  }
+
+  search : string = '';
+
+  onsearch() {
+    this.searchservice.updateSearch(this.search);
+    console.log(this.search);
   }
 }

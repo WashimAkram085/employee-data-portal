@@ -9,6 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeecardComponent } from './components/employeecard/employeecard.component';
+import { SearchPipe } from './pipe/search/search.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { EmployeecardComponent } from './components/employeecard/employeecard.co
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
-    EmployeecardComponent
+    EmployeecardComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { EmployeecardComponent } from './components/employeecard/employeecard.co
     MatSelectModule,
     HttpClientModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
