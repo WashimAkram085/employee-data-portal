@@ -36,12 +36,18 @@
             <!-- <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)"
                 style="color: red;">email</div> -->
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" *ngIf="isAdmin===false">
                 <mat-label>Department</mat-label>
                 <mat-select formControlName="department">
                     <mat-option value="Software Development">Software Development</mat-option>
                     <mat-option value="HR">HR</mat-option>
-                    <mat-option value="Admin">Admin</mat-option>
+                  </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" *ngIf="isAdmin===true">
+                <mat-label>Department</mat-label>
+                <mat-select formControlName="department">
+                    <mat-option value="admin">Admin</mat-option>
                   </mat-select>
             </mat-form-field>
             <!-- <div *ngIf="signupForm.get('department')?.invalid && (signupForm.get('department')?.dirty || signupForm.get('department')?.touched)"

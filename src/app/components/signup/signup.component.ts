@@ -40,7 +40,7 @@ export class SignupComponent implements OnInit {
         this.http.post('http://localhost:3000/admin', formData).subscribe({
           next: response => {
             console.log('Signup successful', response);
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/']);
           },
           error: error => {
             console.error('Signup failed', error);
@@ -51,7 +51,7 @@ export class SignupComponent implements OnInit {
           .subscribe({
             next: response => {
               console.log('Signup successful', response);
-              this.router.navigate(['/dashboard']);
+              this.router.navigate(['/']);
 
               //signup  successfull
             },

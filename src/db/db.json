@@ -29,6 +29,16 @@
       "department": "Software Development",
       "email": "abhi@gg",
       "password": "123456"
+    },
+    {
+      "id": "9f23",
+      "name": "qwertyuio",
+      "dob": "2024-08-22T18:30:00.000Z",
+      "mobile": "1234567890",
+      "role": "user",
+      "department": "Software Development",
+      "email": "w@wa",
+      "password": "123456"
     }
   ],
   "admin": [
@@ -50,6 +60,46 @@
       "role": "admin",
       "department": "admin",
       "email": "ishu@gmail",
+      "password": "123456"
+    },
+    {
+      "id": "df53",
+      "name": "syeda",
+      "dob": "2024-08-09T18:30:00.000Z",
+      "mobile": "1234567890",
+      "role": "admin",
+      "department": "admin",
+      "email": "syeda@g",
+      "password": "098765"
+    },
+    {
+      "id": "1f46",
+      "name": "sneha",
+      "dob": "2024-08-01T18:30:00.000Z",
+      "mobile": "3214567890",
+      "role": "admin",
+      "department": "admin",
+      "email": "sneha@g",
+      "password": "098765"
+    },
+    {
+      "id": "f995",
+      "name": "asdfghj",
+      "dob": "2024-08-14T18:30:00.000Z",
+      "mobile": "1234567890",
+      "role": "admin",
+      "department": "admin",
+      "email": "a@a",
+      "password": "123456"
+    },
+    {
+      "id": "b1d2",
+      "name": "hina",
+      "dob": "2024-08-01T18:30:00.000Z",
+      "mobile": "1234567890",
+      "role": "admin",
+      "department": "admin",
+      "email": "hina@g",
       "password": "123456"
     }
   ]
