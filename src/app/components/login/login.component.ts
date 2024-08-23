@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
             if (admin) {
               console.log("Admin Login Successfull");
               this.employeeService.setLoggedInUser(admin);
+              localStorage.setItem('id', admin.id);
               this.router.navigate(['/dashboard']);
             } else {
               console.log("Invalid Admin Credentials");
@@ -57,6 +58,7 @@ export class LoginComponent implements OnInit {
             if (user) {
               console.log("User Login Successfull");
               this.employeeService.setLoggedInUser(user);
+              localStorage.setItem('id', user.id);
               this.router.navigate(['/dashboard']);
             } else {
               console.log("Invalid User Credentials");

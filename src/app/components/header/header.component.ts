@@ -23,7 +23,7 @@ export class HeaderComponent {
 
   logout(): void {
     // Logic to handle logout
-    localStorage.removeItem('role');
+    localStorage.removeItem('id');
     this.router.navigate(['/login']);
   }
 
