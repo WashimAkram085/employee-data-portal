@@ -29,16 +29,6 @@
       "department": "Software Development",
       "email": "abhi@gg",
       "password": "123456"
-    },
-    {
-      "id": "616e",
-      "name": "abccdddd",
-      "dob": "2024-08-08T18:30:00.000Z",
-      "mobile": "1234567890",
-      "role": "user",
-      "department": "HR",
-      "email": "abb@g",
-      "password": "123456"
     }
   ],
   "admin": [

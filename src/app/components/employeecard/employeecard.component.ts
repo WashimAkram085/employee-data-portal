@@ -53,6 +53,11 @@ export class EmployeecardComponent implements OnInit {
       next: (data) => {
         console.log(data);
         this.employees = this.employees.filter((employee) => employee.id !== id);
+        if (this.loggedInUser.role === 'admin') {
+          this.filteredEmployees = this.employees;
+        } else if (this.loggedInUser.role === 'user') {
+          this.filteredEmployees = this.employees.filter((employee) => employee.department === this.loggedInUser.department);
+        }
       },
       error: (error) => {
         console.error(error);
